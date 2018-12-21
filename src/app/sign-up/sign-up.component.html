@@ -1,0 +1,45 @@
+<div class="row">
+  <div class="col s8 offset s2">
+    <div class="card">
+      <div class="sm-jumbotron center-align">
+           <h2>User Registration</h2>
+              <form class="class col s12 white" #userRegistrationForm="ngForm" (ngSubmit)="userRegistrationForm.valid && onSubmit(userRegistrationForm)">
+              <div class="row">
+                 <div class="input-field col s6">
+       
+           <input class="validate" type="text" name="username" #username="ngModel" [(ngModel)]="user.username" required 
+           [ngClass]="{'invalid-textbox' :userRegistrationForm.submitted && !username.valid}">
+           <label data-error="required field">Username</label>
+       
+           <input class="validate" type="password" name="password" #password="ngModel" [(ngModel)]="user.password" required
+           [ngClass]="{'invalid-textbox' :userRegistrationForm.submitted && !password.valid}">
+           <label data-error="required field">Password</label>
+       
+           <input class="validate" type="text" name="email" #email="ngModel" [(ngModel)]="user.email" required
+           [pattern]="emailValidate" [ngClass]="{'invalid-textbox' :userRegistrationForm.submitted && !email.valid}">
+           <label data-error="Invalid Email Address.">Email</label>
+       
+           <input type="text" name="firstName" #firstName="ngModel" [(ngModel)]="user.firstName" required
+           [ngClass]="{'invalid-textbox' :userRegistrationForm.submitted && !firstName.valid}">
+           <label>First Name</label>
+       
+           <input type="text" name="lastName" #lastName="ngModel" [(ngModel)]="user.lastName" required
+           [ngClass]="{'invalid-textbox' :userRegistrationForm.submitted && !lastName.valid}">
+           <label>Last Name</label>
+       
+                <div class="input-field col s6"></div>
+                <button class="btn-large btn-submit" type="submit">Submit</button>
+               </div>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="success" *ngIf="showsuccessmsg">
+  Reg Sucess.
+</div>
+<div class="alert" *ngIf="showerrormsg">
+{{showerrormsg}}
+</div>
