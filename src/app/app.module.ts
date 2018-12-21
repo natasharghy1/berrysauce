@@ -13,6 +13,8 @@ import { UserComponent } from './user/user.component';
 import { SignUpComponent } from './user/sign-up/sign-up.component';
 import { SignInComponent } from './user/sign-in/sign-in.component';
 import { HomeComponent } from './home/home.component';
+import { IndexComponent } from './user/api/routes/index/index.component';
+import { UsersComponent } from './user/api/routes/users/users.component';
 
 
 
@@ -35,7 +37,9 @@ const myRoots: Routes = [
     UserComponent,
     SignUpComponent,
     SignInComponent,
-    HomeComponent
+    HomeComponent,
+    IndexComponent,
+    UsersComponent
  
 
   ],
