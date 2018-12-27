@@ -6,6 +6,13 @@ const cors = require('cors');
 goose.connect('mongodb://localhost/dbuser', { useNewUrlParser: true})
 var db = goose.connection;
 
+var socket = new Websocket('ws://socket.server.com');
+
+
+socket.onmessage = function(evt){
+  alert("I got data: " + evt.data)
+}
+
 const rtsIndex = require('./routes/index.router');
 
 //BP MIDDLEWARE
