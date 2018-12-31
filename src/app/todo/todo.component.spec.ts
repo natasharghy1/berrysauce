@@ -25,7 +25,19 @@ describe('TodoComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+//testing presence of app-component
+  it(`should have as title 'GCSE STEM Learning Aid'`, () => {
+    const fixture = TestBed.createComponent(TodoComponent);
+    const app = fixture.debugElement.componentInstance;
+  expect(app.title).toEqual('GCSE STEM Learning Aid');
 });
+
+it('should render title in a h2 tag', () => {
+  const fixture = TestBed.createComponent(TodoComponent);
+  const compiled = fixture.debugElement.nativeElement;
+  fixture.detectChanges();
+  expect(compiled.querySelector('h2').textContent).toContain('My Goals and To-Dos');
+});
+
+});
+

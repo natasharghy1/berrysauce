@@ -1,35 +1,31 @@
 <div class="container">
-  <div class="header">
-      <h2>
-          Speed * Time = Distance 
-      </h2> 
-  </div>
+    <div class="header">
+        <h2>
+            Speed * Time = Distance
+        </h2>
+    </div>
 
-  <div class="grid">
-      <div class="row">
-          <div class="col-6">
-              <div class="operation">
+    <div class="grid">
+        <div class="row">
+                <div class="operation">
 
-                  <div class="row">
-                    <div class="col-12">
+                    <div class="row col-12">
                         Speed: <input [(ngModel)]="speed" type="number" name="" placeholder="meters/second">
-                    </div>
-                
-                <div class="row">
-                    <div class="col-12">
                         Time: <input [(ngModel)]="time" type="number" name="" placeholder="seconds">
+                       
                     </div>
+               
                 </div>
-                <button (click)="dstequation()" class="button">Calculate Distance</button>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div class="col-6">
+        </div>
+
+        <div class="col-6">
+          <button (click)="dstequation()" class="button">Calculate Distance</button>
             <div class="result">
-              <span>
-                  Distance : {{distresult}} meters
-              </span>
-          </div>
-          </div>
-</div></div>
+                <span>
+                    Distance : {{distresult}} meters
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</div>

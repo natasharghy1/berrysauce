@@ -1,26 +1,48 @@
-<div class="todos">
+<!--Header segment-->
+<div class="container">
+     <div class="header">
+        <h2>
+           <!--Main title-->
+            My Goals and To-Dos
+        </h2>
+        <!--Subheading-->
+        <h4>Here you can enter all the things you want to achieve..</h4> 
+    </div>
 
+<!--Bootstrap CSS jumbotron banner, hidden when new input is initiated-->
+  <div class="jumbotron" [hidden]="new">
+    Enter a goal or task.
+  </div>
+<!--Bootstrap CSS jumbotron banner, not hidden when new input is initiated
+as this is going to display our input as we type it-->
+  <div class="jumbotron" [hidden]="!new">
+    <!-- Binding to show what we are typing for our 'new' variable -->
+    {{ new }}
+  </div>
+
+<!--This is where user will input stack pushing-->
+<div class="commitstack">
   <div>
+  <!--on submission of form, the push event is initiated-->
   <form (submit)="push($event)">
-  <input [(ngModel)]="newTodo" (keyup.enter)="newTodo=''" class="textfield" name="newTodo">
-    <button  type="submit" [disabled]="newTodo===''">Add Todo</button>
+  <!--on input will be creating a new instance of the new variable-->
+  <input [(ngModel)]="new" class="textfield" name="new">
+    <!--creatae button for the instance 'new' called commit-->
+    <button  type="submit" [disabled]="new===''">Commit</button>
   </form>
   </div>
-
-  <div [hidden]="newTodo">
-    Type in a new todo...
-  </div>
-
-  <div [hidden]="!newTodo">
-    <!-- Another two-way binding example -->
-    Typing: {{ newTodo }}
-  </div>
-
   <ul>
-  <li *ngFor="let todo of todos; let i=index">
-    <input type="checkbox" class="checkbox" [(ngModel)]="todo.completed" />
-  <span [ngClass]="{'checked': todo.completed}">{{ todo.newTodo }}</span>
-  <span (click)="pop(i)" class="delete-icon">[X]</span>
+
+  <!--list of commitments - initiating Angular for-loop-->
+  <!--which will bind containers from the stack to i = index-->  
+  <li *ngFor="let commitcontainer of commitstack; let i=index">
+    <!--checkbox, ticked on completion, function spec in todo.js-->
+    <input type="checkbox" class="checkbox" [(ngModel)]="commitcontainer.completed" />
+  <!--list item showing checkbox and the new contents of the commit container-->
+  <span [ngClass]="{'checked': commitcontainer.completed}">{{ commitcontainer.new }}</span>
+  <!--delete button will pop the indexed item from the list stack-->
+  <span (click)="pop(i)" class="del">Delete</span>
     </li>
     </ul>
+</div>
 </div>

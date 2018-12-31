@@ -1,38 +1,33 @@
+<!--Calculator page-->
 <div class="container">
   <div class="header">
-      <h2>
-          Calculator component
-      </h2> 
+    <h2>
+        Calculator component
+    </h2>
   </div>
-
-  <div class="grid">
-      <div class="row">
-          <div class="col-6">
-              <div class="operation">
-
-                  <div class="row">
-                    <div class="col-12">
-                        <input [(ngModel)]="number1" type="number" name="" placeholder="number">
-                    </div>
+    <!--Bootstrap-CSS-->
+                    <div class="row col-6">
+                            <!--button which obtains the containers from calculator.component.ts-->
+                            <input [(ngModel)]="number1" type="number" placeholder="number">
                 
-                <div class="row">
-                    <div class="col-12">
-                        <input [(ngModel)]="number2" type="number" name="" placeholder="number">
+                            <!--button which obtains the containers from calculator.component.ts-->
+                            <input [(ngModel)]="number2" type="number" placeholder="number">
                     </div>
-                </div>
-                <button (click)="add()" class="button">Add</button>
-                <button (click)="subtract()" class="button">Subtract</button> 
-                <button (click)="multiply()" class="button">Multiply</button> 
-                <button (click)="divide()" class="button">Divide</button>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div class="col-6">
-            <div class="result">
-              <span>
-                  Result : {{result}}
-              </span>
-          </div>
-          </div>
-</div></div>
+                        <!--button which obtains the mathematic methods from calculator.component.ts
+                        and applies the process to each button-->
+                     <div class="row">
+                        <button (click)="add()" class="button1">Add</button>
+                        <button (click)="subtract()" class="button2">Subtract</button>
+                        <button (click)="multiply()" class="button3">Multiply</button>
+                        <button (click)="divide()" class="button4">Divide</button> 
+                     </div>
+
+<!--Show current value of result with Angular {{}}, which shows what is currently contained within result-->    
+      <div class="col-6">
+         <div class="result">
+          <span>
+              Result : {{result}}
+           </span>
+         </div>
+      </div>
+</div>

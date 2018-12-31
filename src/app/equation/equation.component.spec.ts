@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { EquationComponent } from './equation.component';
+import { FormsModule } from '@angular/forms';
 
 describe('EquationComponent', () => {
   let component: EquationComponent;
@@ -7,7 +8,8 @@ describe('EquationComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EquationComponent ]
+      declarations: [ EquationComponent ],
+      imports:[FormsModule]
     })
     .compileComponents();
   }));
@@ -18,7 +20,9 @@ describe('EquationComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+  it('should create the equation', () => {
+    const fixture = TestBed.createComponent(EquationComponent);
+    const equ = fixture.debugElement.componentInstance;
+  expect(equ).toBeTruthy();
+});
 });

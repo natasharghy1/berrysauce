@@ -1,23 +1,30 @@
-// Create a "close" button and append it to each list item
+// create a "close" button and attach it to each list item
 function newElement() {
-  var li = document.createElement("li");
+  //add to the list of commitments
+  var list = document.createElement("li");
+  //input variable established
   var inputValue = document.getElementById("myInput").value;
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
+  //create text node with specified text of input value
+  var txtcontainer = document.createTextNode(inputValue);
+  //create list item containing the text
+  li.appendChild(txtcontainer);
+
+  //if input is null
   if (inputValue === '') {
-    alert("You must write something!");
+  //send alert
+    alert("Goals will motivate you! Think of one if you can.");
   } else {
+    //add input to list
     document.getElementById("myUL").appendChild(li);
   }
-  document.getElementById("myInput").value = "";
 
+  //create button for the close
   var button = document.createElement("button");
-  var txt = document.createTextNode("\u00D7");
   button.className = "close";
-  button.appendChild(txt);
-  li.appendChild(button);
 
+  //for all items in list
   for (i = 0; i < close.length; i++) {
+    //close the item on click
     close[i].onclick = function() {
       var div = this.parentElement;
       div.style.display = "none";
@@ -25,34 +32,37 @@ function newElement() {
   }
 } 
 
-var myNodelist = document.getElementsByTagName("li");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
+//obtain list of nodes
+var nodelist = document.getElementsByTagName("li");
+var i; //index
+//loop through each item in the list
+for (i = 0; i < nodelist.length; i++) {
+  //create a button for close
   var button = document.createElement("button");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(button);
 }
 
-// Click on a close button to hide the current list item
+// click on close button to get rid of list item
+//get close class
 var close = document.getElementsByClassName("close");
 var i;
+//for each list item
 for (i = 0; i < close.length; i++) {
+  //close list item on click and run function
   close[i].onclick = function() {
     var div = this.parentElement;
     div.style.display = "none";
   }
 }
 
-// Add a "checked" symbol when clicking on a list item
-var list = document.querySelector('ul');
+//add a "checked" symbol when clicking on a list item
+var list = document.querySelector('li');
+//on click of list element, toggle the checklist tick!
 list.addEventListener('click', function(ev) {
   if (ev.target.tagName === 'li') {
     ev.target.classList.toggle('checked');
   }
+//otherwise not initiated
 }, false);
 
-// Create a new list item when clicking on the "Add" button
 
 

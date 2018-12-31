@@ -1,6 +1,14 @@
 h1 {
-	
+
 padding: 15px;
-color: mediumvioletred;
-	
+color: black;
+}
+
+nav {
+    border: solid 3px red;
+}
+
+a {
+   color: rgb(180, 13, 83)low;
+    
 }
