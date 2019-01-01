@@ -12,18 +12,18 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HomepageComponent } from './homepage/homepage.component';
 import { LoginComponent } from './login/login.component';
 import { TodoComponent } from './todo/todo.component';
-import { HeroesComponent } from './heroes/heroes.component';
 import { EquationComponent } from './equation/equation.component';
 import { CalculatorComponent } from './calculator/calculator.component';
+import { BiologyComponent } from './biology/biology.component';
 
 //The routing of the application, which component is present on which page. Function called from app-routing.module.ts
 const myRoots: Routes = [
   { path: '', component: LoginComponent },
   { path: 'home', component: HomepageComponent },
   { path: 'one', component: TodoComponent },
-  { path: 'sci' , component: HeroesComponent},
   { path: 'math', component: EquationComponent },
-  { path: 'calc', component: CalculatorComponent }
+  { path: 'calc', component: CalculatorComponent },
+  { path: 'bio', component: BiologyComponent }
 ];
 
 //Child module declarations
@@ -33,9 +33,9 @@ const myRoots: Routes = [
     HomepageComponent,
     LoginComponent,
     TodoComponent,
-    HeroesComponent,
     EquationComponent,
-    CalculatorComponent
+    CalculatorComponent,
+    BiologyComponent
   ],
 
 //These imports add additional functions to the application

@@ -34,7 +34,7 @@ function processthis(err) {
 	}
 
 }
-/*
+
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended : false}))
 app.use(express.static('public'));
@@ -79,4 +79,4 @@ app.post('/api/user/create', (req, res) => {
 	});
 })
 
-app.listen(3000, () => console.log('Blog server running on port 3000!'))*/
+app.listen(3000, () => console.log('Blog server running on port 3000!'))

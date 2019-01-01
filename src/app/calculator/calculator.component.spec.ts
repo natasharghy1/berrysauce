@@ -27,12 +27,26 @@ describe('CalculatorComponent', () => {
   expect(calc).toBeTruthy();
 });
 
-  it('should have a button present', () => {
+  it('should have a button present, and therefore all', () => {
      const fixture = TestBed.createComponent(CalculatorComponent);
      const compiled = fixture.debugElement.nativeElement;
      fixture.detectChanges();
      expect(compiled.querySelector('button').textContent).toContain('Add');
   });  
-  
+
+  it('should have an input available', () => {
+    const fixture = TestBed.createComponent(CalculatorComponent);
+    const compiled = fixture.debugElement.nativeElement;
+    fixture.detectChanges();
+    expect(compiled.querySelector('input').textContent);
+ });  
+
+ it('should display a result', () => {
+  const fixture = TestBed.createComponent(CalculatorComponent);
+  const compiled = fixture.debugElement.nativeElement;
+  fixture.detectChanges();
+  expect(compiled.querySelector('span').textContent).toContain(' Result : ');
+});  
+
 });
 

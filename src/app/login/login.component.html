@@ -1,14 +1,17 @@
 <!--Form for Sign-in page-->
+<div class="container">
+    <div class="header">
+      <h2>
+        Please sign in
+      </h2>
+    </div>
 <form class="form-signin">
-    <h2 class="form-signin-heading">Please sign in</h2>
-    
        <!--button will check user inputs against information on system-->
        <label for="inputEmail" class="sr-only">Email address</label>
        <input name="email" [(ngModel)] = "user.username" type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
        
        <label for="inputPassword" class="sr-only">Password</label>
        <input name="password" [(ngModel)] = "user.password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-
    <!--button which on click will start the validate function-->
-   <button class="btn btn-lg btn-primary btn-block" (click)="validate()" type="button">Sign in</button>
+   <button class="btn btn-success" (click)="validate()" type="button">Sign in</button>
 </form>

@@ -10,9 +10,8 @@
                 <div class="operation">
 
                     <div class="row col-12">
-                        Speed: <input [(ngModel)]="speed" type="number" name="" placeholder="meters/second">
-                        Time: <input [(ngModel)]="time" type="number" name="" placeholder="seconds">
-                       
+                       <label>Speed:</label><input [(ngModel)]="speed" type="number" name="speed" placeholder="meters/second">
+                       <label>Time:</label><input [(ngModel)]="time" type="number" name="time" placeholder="seconds">
                     </div>
                
                 </div>
@@ -22,7 +21,7 @@
           <button (click)="dstequation()" class="button">Calculate Distance</button>
             <div class="result">
                 <span>
-                    Distance : {{distresult}} meters
+                  Distance in meters: {{distresult}}
                 </span>
             </div>
         </div>

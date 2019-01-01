@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="header">
+<h2>Plant Cell Parts</h2>
+</div>
+<ul class="part">
+  <li *ngFor="let part of parts"
+    [class.selected]="part === cellParts"
+    (click)="onSelect(part)">
+    <span class="badge">{{part.id}}</span> {{part.name}}
+  </li>
+</ul>
+
+
+<div  *ngIf="cellParts">
+  <h3><b>Part:</b> {{cellParts.name}}</h3> 
+  <h3><b>Function:</b> {{cellParts.function}}</h3>
+  </div>
+</div>
