@@ -1,30 +1,32 @@
 <div class="container">
-    <div class="header">
-        <h2>
-            Speed * Time = Distance
-        </h2>
+  <div class="header">
+    <h2>
+      Speed * Time = Distance
+    </h2>
+  </div>
+
+<div class="grid">
+  <div class="row">
+    <div class="operation">
+      <div class="row col-12">
+        <!--Inputs for speed and time, calling the container made in the component class in which to store the value
+        and apply the functions-->
+        <label>Speed:</label><input [(ngModel)]="speed" type="number" name="speed" placeholder="meters/second">
+        <label>Time:</label><input [(ngModel)]="time" type="number" name="time" placeholder="seconds">  
+      </div>
     </div>
+  </div>
 
-    <div class="grid">
-        <div class="row">
-                <div class="operation">
+  <div class="col-6">
+    <!--Call function dstequation on button click-->
+    <button (click)="dstequation()" class="button">Calculate Distance</button>
+      <div class="result">
+        <span>
+          <!--Showing distance in meters-->  
+          Distance in meters: {{distresult}}
+        </span>
+      </div>
+  </div>
 
-                    <div class="row col-12">
-                       <label>Speed:</label><input [(ngModel)]="speed" type="number" name="speed" placeholder="meters/second">
-                       <label>Time:</label><input [(ngModel)]="time" type="number" name="time" placeholder="seconds">
-                    </div>
-               
-                </div>
-        </div>
-
-        <div class="col-6">
-          <button (click)="dstequation()" class="button">Calculate Distance</button>
-            <div class="result">
-                <span>
-                  Distance in meters: {{distresult}}
-                </span>
-            </div>
-        </div>
-        
-    </div>
+ </div>
 </div>

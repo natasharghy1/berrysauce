@@ -5,13 +5,12 @@
         Please sign in
       </h2>
     </div>
-<form class="form-signin">
-       <!--button will check user inputs against information on system-->
-       <label for="inputEmail" class="sr-only">Email address</label>
-       <input name="email" [(ngModel)] = "user.username" type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
-       
-       <label for="inputPassword" class="sr-only">Password</label>
-       <input name="password" [(ngModel)] = "user.password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-   <!--button which on click will start the validate function-->
-   <button class="btn btn-success" (click)="validate()" type="button">Sign in</button>
-</form>
+
+  <form class="form-signin">
+    <!--button will check user inputs against information on system-->
+    <input name="email" [(ngModel)] = "user.username" type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
+      <br>
+    <input name="password" [(ngModel)] = "user.password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+    <!--button which on click will start the validate function-->
+    <button class="btn btn-success" (click)="validate()" type="button">Sign in</button>
+  </form>

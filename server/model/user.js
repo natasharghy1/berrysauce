@@ -12,5 +12,6 @@ const userSchema = new Schema({
 
 //retrieves mongoose instance so that we can connect to it 
 const User = goose.model('User', userSchema);
+
 //export user schema
 module.exports = User;

@@ -29,8 +29,7 @@ export class CalculatorComponent implements OnInit {
     this.result = this.number1 / this.number2
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }
 

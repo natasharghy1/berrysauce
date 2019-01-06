@@ -1,18 +1,26 @@
+<!--Header segment-->
 <div class="container">
   <div class="header">
-<h2>Plant Cell Parts</h2>
-</div>
-<ul class="part">
-  <li *ngFor="let part of parts"
-    [class.selected]="part === cellParts"
-    (click)="onSelect(part)">
-    <span class="badge">{{part.id}}</span> {{part.name}}
-  </li>
-</ul>
-
-
-<div *ngIf="cellParts">
-  <h3><b>Part:</b> {{cellParts.name}}</h3> 
-  <h3><b>Function:</b> {{cellParts.function}}</h3>
+    <!--Main title-->
+    <h2>Plant Cell Parts</h2>
   </div>
+
+  <!--Create list for the parts-->
+  <ul class="part">
+    <!--For loop iterating through each part-->
+    <!--from all of the parts from the cellParts class-->
+    <!--When clicked, we want to show the parts functionality-->
+    <li *ngFor="let part of parts" [class.selected]="part === cellParts" (click)="onSelect(part)">
+      <!--Obtain the id and part name of all parts to show on the list-->
+      <span class="func">{{part.id}}</span> {{part.name}}
+    </li>
+  </ul>
+
+  <!--If showing part from cell part-->
+  <div *ngIf="cellParts">
+    <!--Show name and function-->
+    <h3><b>Part:</b> {{cellParts.name}}</h3> 
+    <h3><b>Function:</b> {{cellParts.function}}</h3>
+  </div>
+
 </div>

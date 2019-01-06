@@ -5,13 +5,13 @@ import { User } from './user';
 @Injectable()
 export class LoginService {
  
-    constructor(private http: HttpClient){}
+  constructor(private http: HttpClient){}
      
-    validate(user: User) {
-        return this.http.post('./',{
-            username : user.username,
-            password : user.password
-        });
-    }
+  validate(user: User) {
+    return this.http.post('./',{
+      username : user.username,
+      password : user.password
+    });
+  }
  
 }

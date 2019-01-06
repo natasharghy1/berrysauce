@@ -11,20 +11,18 @@ import { Component, OnInit } from '@angular/core';
 //Class for the containers for sums
 export class EquationComponent implements OnInit {
 
-//Speed, distance and time value containers
-    public speed : number;
-    public time : number;
-    public distresult : number;
+  //Speed, distance and time value containers
+  public speed : number;
+  public time : number;
+  public distresult : number;
  
-//Equation that will be applied to the button
-    public dstequation(){
-      this.distresult = this.speed * this.time
-    }
-
-  constructor() { }
-
-  ngOnInit() {
+  //Equation that will be applied to the button
+  public dstequation(){
+    this.distresult = this.speed * this.time
   }
+
+  constructor() {}
+  ngOnInit() {}
 
 }
 

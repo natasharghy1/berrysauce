@@ -1,14 +1,15 @@
 h1 {
 
-padding: 15px;
-color: black;
+  padding: 15px;
+  color: black;
 }
 
 nav {
-    border: solid 3px red;
+
+  border: solid 3px red;
 }
 
 a {
-   color: rgb(180, 13, 83)low;
-    
+
+  color: rgb(180, 13, 83)low; 
 }

@@ -5,20 +5,21 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './todo.component.html',
   styleUrls: ['./todo.component.css']
 })
+
 export class TodoComponent implements OnInit {
 //class for list items
   new: string;
   commitstack: any;
   commitcontainer: any;
-  
-  constructor() { 
+
+  constructor() {
     //new item
     this.new;
     //array of items - iniate STACK
     this.commitstack = [];
   }
-  
-//push new item onto STACK list event
+
+  //push new item onto STACK list event
   push(event) {
     //inside the commitment container
     this.commitcontainer = {
@@ -32,16 +33,15 @@ export class TodoComponent implements OnInit {
     this.commitstack.push(this.commitcontainer);
     //(which will contain the input - new)
     this.new = '';
-    event.preventDefault();
+      event.preventDefault();
   }
- 
+
   //pop function returning index, when run...
-  pop(index) {
+  pop(index){
     //splice index item from the stack of commits
     this.commitstack.splice(index, 1);
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }

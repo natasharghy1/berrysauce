@@ -1,4 +1,5 @@
 .header{
+
     margin-top: 25px;
     width: 100%;
     background-color: rgb(252, 8, 61);
@@ -6,35 +7,34 @@
 }
  
 .header h2{
+
     color: #fff;
     padding: 25px;
 }
  
 .button {
+
     background-color: gray; 
     color: white;
-
     padding: 20px, 30px;
     font-size: 20px;
     margin: 4px 2px;
-
     text-align: center;
     text-decoration: none;
     display: inline-block;
-  
     cursor: pointer;
 }
  
 input{
+
     border: none;
     border-bottom: 3px solid black;
-
     width: 100%;
     margin: 20px 10px 10px 10px;
-
 }
  
 .result{
+
     width: 80%;
     margin: 10px;
     height: 100px;
@@ -43,5 +43,6 @@ input{
 }
  
 .result span{
+    
     line-height: 100px;
 }
