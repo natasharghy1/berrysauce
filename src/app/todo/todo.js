@@ -1,4 +1,4 @@
-// create a "close" button and attach it to each list item
+//create a "close" button and attach it to each list item
 function newElement() {
   //add to the list of commitments
   var list = document.createElement("li");

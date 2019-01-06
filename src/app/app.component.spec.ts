@@ -38,7 +38,7 @@ describe('AppComponent', () => {
       const fixture = TestBed.createComponent(AppComponent);
         const compiled = fixture.debugElement.nativeElement;
       fixture.detectChanges();
-    expect(compiled.querySelector('nav').textContent).toContain('Log InCalculatorTodoHeroesPhysicsGeographyTutor');
+    expect(compiled.querySelector('nav').textContent).toContain('Log InCalculatorTodoPhysicsBiology');
   });
 
 

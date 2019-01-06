@@ -19,24 +19,26 @@ export class LoginComponent {
   }
 //Validate function 
   validate() {
-    //Check username and password against mongodb users
+    //Check username and password 
     if(this.user.username && this.user.password) {
-        this.loginService.validate(this.user).subscribe(result => {
+        this.loginService.validate(this.user).subscribe(result => { 
+        //fat arrow function - runs a function without the need to define
         //Show result in console log
         console.log('result is ', result);
         //If successful then navigate to homepage
         if(result['status'] === 'success') {
           this.router.navigate(['/homepage']);
         } else {
-          //Send alert
+          //Send alert as username and password is wrong - we ran the login service and schema
           alert('Wrong username password');
         }
-         
+      //show error   
       }, error => {
         console.log('error is ', error);
       });
+    //else, inputs are empty, so tell the user to fill in inputs
     } else {
-        alert('enter user name and password');
+        alert('Enter your username and password.');
     }
   }
  

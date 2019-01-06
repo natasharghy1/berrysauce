@@ -6,10 +6,8 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ReactiveFormsModule } from '@angular/forms'; 
 
 //My Components that I have created using "ng g c NameofComponent" with AngularCLI
-import { HomepageComponent } from './homepage/homepage.component';
 import { LoginComponent } from './login/login.component';
 import { TodoComponent } from './todo/todo.component';
 import { EquationComponent } from './equation/equation.component';
@@ -19,7 +17,6 @@ import { BiologyComponent } from './biology/biology.component';
 //The routing of the application, which component is present on which page. Function called from app-routing.module.ts
 const myRoots: Routes = [
   { path: '', component: LoginComponent },
-  { path: 'home', component: HomepageComponent },
   { path: 'one', component: TodoComponent },
   { path: 'math', component: EquationComponent },
   { path: 'calc', component: CalculatorComponent },
@@ -30,7 +27,6 @@ const myRoots: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    HomepageComponent,
     LoginComponent,
     TodoComponent,
     EquationComponent,
